@@ -1,0 +1,16 @@
+{
+  "name": "miniprojetom4_libraryapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+    "scripts": {
+   "start": "nodemon Library.js"
+   
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
