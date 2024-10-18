@@ -7,12 +7,13 @@ import cors from "cors"
 
 const library = express()
 
+library.use(cors({origin: 'http://localhost:5173'}))
 library.use(express.json())
 
 library.use(RoteBoocksG)
 library.use(FromBoocksCodes)
 library.use(FromBoocksExperiences)
-library.use(cors({origin: 'http://localhost:5173'}))
+
 
 
 const PORT = 5000
