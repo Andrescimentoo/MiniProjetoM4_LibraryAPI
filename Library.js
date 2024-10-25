@@ -1,8 +1,8 @@
-
 import express from "express"
-import { RoteBoocksG } from "./Src/Rotes/Rotes_Boocks_Guides/Rotes_Guides.js"
-import { FromBoocksCodes } from "./Src/Rotes/Rotes_Boocks_Codes/Rotes_Code.js"
-import { FromBoocksExperiences } from "./Src/Rotes/Rotes_Boocks_Experiences/Rotes_Experiences.js"
+import { routeBooksCodes } from "./Src/routes/rotesBooksCodes/rotesBooksCode.js"
+import { routeBooksExperiences } from "./Src/routes/rotesBooksExperiences/rotesBooksExperiences.js"
+import {roteBooksGuides,} from "./Src/routes/rotesBooksGuides/rotesBooksGuides.js"
+
 import cors from "cors"
 
 const library = express()
@@ -10,16 +10,16 @@ const library = express()
 library.use(cors({origin: 'http://localhost:5173'}))
 library.use(express.json())
 
-library.use(RoteBoocksG)
-library.use(FromBoocksCodes)
-library.use(FromBoocksExperiences)
-
+library.use(routeBooksCodes, routeBooksExperiences, roteBooksGuides)
 
 
 const PORT = 5000
 
 
-
-library.listen(PORT,()=>{
-    console.log(`Aplicacao esta rodando em: http://localhost:${PORT}`)
-})
+try {
+    library.listen(PORT, () => {
+        console.log(`Aplicação está rodando em: http://localhost:${PORT}!`);
+    });
+} catch (error) {
+    console.log('Erro ao rodar aplicação!', error);
+}
