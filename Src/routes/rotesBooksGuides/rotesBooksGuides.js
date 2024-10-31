@@ -1,8 +1,8 @@
 import { Router } from "express";
-import booksGuides from "../../controllers/booksGuides/booksGuides";
+import booksGuides from "../../controllers/booksGuides/booksGuides.js";
 
 const roteBooksGuides = Router()
 
-roteBooksGuides.get("/RoteNumberOne",booksGuides)
+roteBooksGuides.get("/routesGuides",booksGuides)    
 
 export {roteBooksGuides}               

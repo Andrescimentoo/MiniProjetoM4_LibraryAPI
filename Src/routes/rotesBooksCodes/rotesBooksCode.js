@@ -3,6 +3,6 @@ import AllBoocksCodes from "../../controllers/booksCodes/booksCode.js";
 
 const routeBooksCodes = Router()
 
-routeBooksCodes.get("/RoteNumberTwo",AllBoocksCodes)
+routeBooksCodes.get("/routesCodes",AllBoocksCodes)
 
 export {routeBooksCodes}

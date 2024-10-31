@@ -3,6 +3,6 @@ import booksExperiences from "../../controllers/booksExperiences/booksExperience
 
 const routeBooksExperiences = Router()
 
-routeBooksExperiences.get("/RoteNumberThree",booksExperiences)
+routeBooksExperiences.get("/routeExperiences",booksExperiences)
 
 export{routeBooksExperiences}
