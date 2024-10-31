@@ -1,8 +1,9 @@
 import { dataGuides } from "../../models/model.js" 
 
- const booksGuides = (req,res)=>{
+ const booksGuides = async(req,res)=>{
     try{
-        res.status(200).send(dataGuides)
+        const findAllGuides = await dataGuides.findAll()
+        res.status(200).send(findAllGuides)
     }catch(error){
         res.status(500).send(error)
         console.log("erro ao enviar os dados!") 
