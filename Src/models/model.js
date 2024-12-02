@@ -1,7 +1,7 @@
 import { DataTypes} from "sequelize";
 import sequelize from "../dataBases/config.js";
 
-const datacodes = sequelize.define("books_Code", {
+const dataCodes = sequelize.define("books_Code", {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -82,4 +82,4 @@ const dataGuides = sequelize.define("books_guides", {
     timestamps: false //?
 })
 
-export { datacodes, dataExperiences, dataGuides };
+export { dataCodes, dataExperiences, dataGuides };
