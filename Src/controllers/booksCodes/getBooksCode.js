@@ -1,15 +1,15 @@
-import { datacodes } from "../../models/model.js"
+import { dataCodes } from "../../models/model.js"
 
-const AllBoocksCodes = async (req,res) => {
+const allBooksCodes = async (req,res) => {
     try{
-        const findAllcodes = await datacodes.findAll() //await = espera!...e dps executa
+        const findAllcodes = await dataCodes.findAll() //await = espera!...e dps executa
         res.status(200).send(findAllcodes)
     }catch (error) {
         res.status(500).send(error)
-        console.log("erro ao enviar os dados!")
+        console.log("erro ao consultar os dados!")
     }
 }
-export default AllBoocksCodes
+export default allBooksCodes
 
 
 
