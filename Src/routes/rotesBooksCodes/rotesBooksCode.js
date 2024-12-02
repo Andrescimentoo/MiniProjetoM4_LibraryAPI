@@ -1,8 +1,13 @@
 import { Router } from "express";
-import AllBoocksCodes from "../../controllers/booksCodes/booksCode.js";
+import allBooksCodes from "../../controllers/booksCodes/getBooksCode.js";
+import postCodes from "../../controllers/booksCodes/postCodes.js";
 
 const routeBooksCodes = Router()
 
-routeBooksCodes.get("/routesCodes",AllBoocksCodes)
+
+routeBooksCodes.get("/routesCodes",allBooksCodes)
+routeBooksCodes.post("/routePostCodes",postCodes)
+routeBooksCodes.put("/routePutCodes")
+routeBooksCodes.delete("/routeDeleteCodes")
 
 export {routeBooksCodes}
