@@ -1,8 +1,8 @@
-import { dataExperiences } from "../../models/model.js";
+import { books_experiences} from "../../models/model.js";
 
 const deleteExperiences = async (req,res) => {
     try {
-        const getId = await dataExperiences.findByPk(req.params.id)
+        const getId = await books_experiences.findByPk(req.params.id)
         const destroyBooksExperinces = await getId.destroy()
         
          res.status(200).send(destroyBooksExperinces)

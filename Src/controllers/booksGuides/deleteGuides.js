@@ -1,8 +1,8 @@
-import { dataGuides } from "../../models/model.js";
+import { books_guides} from "../../models/model.js";
 
 const deleteGuides = async (req,res) => {
     try {
-        const getId = await dataGuides.findByPk(req.params.id)
+        const getId = await books_guides.findByPk(req.params.id)
         const destroyBooksGuides = getId.destroy()
         
         res.status(200).send(destroyBooksGuides)

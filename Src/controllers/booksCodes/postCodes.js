@@ -1,13 +1,14 @@
-import { dataCodes } from "../../models/model.js";
+import { books_code } from "../../models/model.js"
+
 
 const postCodes = async (req,res) => {
     try {
-       const createBooksCodes = await dataCodes.create(req.body)
+       const createBooksCodes = await books_code.create(req.body)
        res.status(201).send(createBooksCodes)
    
     } catch (error) {
         res.status(500).send(error)
-        console.log("erro ao criar novo dado")
+        console.log("erro ao criar novo dado",error)
     }
 }
 export default postCodes

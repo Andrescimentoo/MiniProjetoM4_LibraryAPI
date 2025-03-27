@@ -1,8 +1,7 @@
-import { dataExperiences } from "../../models/model.js";
-
+import { books_experiences } from "../../models/model.js"
 const booksExperiences = async (req,res)=> {
    try{
-        const findAllBooks = await dataExperiences.findAll()
+        const findAllBooks = await books_experiences.findAll()
          res.status(200).send(findAllBooks)
    }catch(error){
         res.status(500).send(error)

@@ -1,7 +1,7 @@
 import { DataTypes} from "sequelize";
 import sequelize from "../dataBases/config.js";
 
-const dataCodes = sequelize.define("books_Code", {
+const books_code = sequelize.define("books_database", {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -28,7 +28,7 @@ const dataCodes = sequelize.define("books_Code", {
     timestamps: false //?
 })
 
-const dataExperiences = sequelize.define("books_experiences", {
+const books_experiences = sequelize.define("books_database", {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -55,7 +55,7 @@ const dataExperiences = sequelize.define("books_experiences", {
     timestamps: false //?
 })
 
-const dataGuides = sequelize.define("books_guides", {
+const books_guides = sequelize.define("books_database", {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -82,4 +82,4 @@ const dataGuides = sequelize.define("books_guides", {
     timestamps: false //?
 })
 
-export { dataCodes, dataExperiences, dataGuides };
+export { books_code , books_experiences, books_guides };

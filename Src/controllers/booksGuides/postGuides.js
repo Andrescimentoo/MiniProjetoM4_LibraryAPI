@@ -1,8 +1,8 @@
-import { dataGuides } from "../../models/model.js";
+import { books_guides } from "../../models/model.js";
 
 const postGuides = async (req, res) => {
     try {
-        const createBoksGuides = await dataGuides.create(req.body);
+        const createBoksGuides = await books_guides.create(req.body);
         res.status(201).send(createBoksGuides); 
     } catch (error) {
         res.status(500).send(error);

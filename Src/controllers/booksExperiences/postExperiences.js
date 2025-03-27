@@ -1,8 +1,8 @@
-import { dataExperiences } from "../../models/model.js";
+import { books_experiences } from "../../models/model.js";
 
 const postExperiences = async (req,res) => {
    try {
-    const createBooksExperiences = await dataExperiences.create(req.body)
+    const createBooksExperiences = await books_experiences.create(req.body)
         res.status(201).send(createBooksExperiences)
    
     } catch (error) {

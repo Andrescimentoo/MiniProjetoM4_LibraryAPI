@@ -1,8 +1,8 @@
-import { dataGuides } from "../../models/model.js";
+import { books_guides} from "../../models/model.js";
 
 const putGuides = async (req,res) => {
     try {
-        const getId = await dataGuides.findByPk(req.params.id) // tipo assim nesse banco de dados captura o id dps injeta nele o metodo update 
+        const getId = await books_guides.findByPk(req.params.id) // tipo assim nesse banco de dados captura o id dps injeta nele o metodo update 
         const updateGuides = await getId.update(req.body)
 
         res.status(200).send(updateGuides)
